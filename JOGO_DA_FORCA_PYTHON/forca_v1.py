@@ -130,7 +130,7 @@ def main():
 		print("Sua palavra é: ", end='')
 		game.print_hidden_word()
 		
-		letter = input("\nPor favor, digite uma letra ou palavra que você ache ser a certa: ")
+		letter = input("\nPor favor, digite uma letra ou palavra que você ache ser a certa: ").lower()
 		
 		#validando a entrada
 		
@@ -138,7 +138,7 @@ def main():
 	
 		while(len(letter) > 1 and letter != game.word):
 			print("\nHmmm... Acho que você errou a palavra.\nTente enviar uma letra ou outra palavra que ache ser a certa")
-			letter = input("")	
+			letter = input("").lower()	
 		
 		if game.check_word(letter): break
 
